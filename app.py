@@ -41,7 +41,7 @@ def preprocess_image(image_bytes, model_name):
         raise ValueError("Unsupported model")
     return np.expand_dims(img, axis=0)
 
-@app.route('/classify_pneumonia', methods=['POST'])
+@app.route('/classify_pneumonia', methods=['POST','GET'])
 def classify_pneumonia():
     if 'file' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
@@ -58,7 +58,7 @@ def classify_pneumonia():
     except Exception as e:
         return jsonify({'error': f'Error during classification: {e}'}), 500
 
-@app.route('/classify_brain_tumor', methods=['POST'])
+@app.route('/classify_brain_tumor', methods=['POST','GET'])
 def classify_brain_tumor():
     if 'file' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
@@ -73,7 +73,6 @@ def classify_brain_tumor():
         return jsonify({'class': class_label})
     except Exception as e:
         return jsonify({'error': f'Error during classification: {e}'}), 500
-
 
 if __name__ == '__main__':
     app.run(debug=True)
