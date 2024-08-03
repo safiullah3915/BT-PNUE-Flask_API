@@ -36,14 +36,11 @@ Pygments==2.18.0
 requests==2.32.3
 rich==13.7.1
 six==1.16.0
-tensorboard==1.8.0
-tensorboard-data-server==0.7.2
-tensorflow @ https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py3-none-any.whl#sha256=373c637f9c4f06346b1b02e280b30517d262a1651b252ff889f7c22716ef4548
-tensorflow-intel==2.17.0
+tensorboard==2.17.0  # Updated to compatible version
+tensorflow==2.17.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.4.0
 typing_extensions==4.12.2
 urllib3==2.2.2
 Werkzeug==3.0.3
 wrapt==1.16.0
-
