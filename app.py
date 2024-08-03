@@ -74,4 +74,7 @@ def classify_brain_tumor():
     except Exception as e:
         return jsonify({'error': f'Error during classification: {e}'}), 500
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
